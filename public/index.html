@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Follow API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">F</span>
+          <span>Follow API</span>
+        </div>
+        <div class="status-chip success">API online</div>
+      </header>
+
+      <nav class="nav-tabs" aria-label="Main navigation">
+        <a class="nav-tab active" href="/">People</a>
+        <a class="nav-tab" href="/activity">Activity</a>
+      </nav>
+
+      <main class="content">
+        <section class="section-header">
+          <div>
+            <p class="eyebrow">Directory / Follow Relationships</p>
+            <h1>People</h1>
+          </div>
+          <span class="pill neutral">4 people · 2 following</span>
+        </section>
+
+        <section id="people-list" class="card-list" aria-live="polite"></section>
+      </main>
+
+      <footer class="footer">
+        <span>Follow API · in-memory social graph</span>
+        <span>GET /people · PATCH /follows</span>
+      </footer>
+    </div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/people.js"></script>
+  </body>
+</html>
