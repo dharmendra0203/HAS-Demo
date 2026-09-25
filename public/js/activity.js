@@ -32,7 +32,7 @@ async function renderActivity() {
             <th>Person</th>
             <th>Relationship</th>
             <th>Last changed</th>
-            <th>Action</th>
+            <th>#Action</th>
           </tr>
         </thead>
         <tbody>${buildTableRows(follows)}</tbody>
