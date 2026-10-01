@@ -19,4 +19,8 @@ app.get('/activity', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/activity.html'));
 });
 
+app.get('/math', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/math.html'));
+});
+
 module.exports = app;

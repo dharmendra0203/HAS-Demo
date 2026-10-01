@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math | Follow API</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">F</span>
+          <span>Follow API</span>
+        </div>
+        <div class="status-chip success">API online</div>
+      </header>
+
+      <nav class="nav-tabs" aria-label="Main navigation">
+        <a class="nav-tab" href="/">People</a>
+        <a class="nav-tab" href="/activity">Activity</a>
+        <a class="nav-tab active" href="/math" aria-current="page">Math</a>
+      </nav>
+
+      <main class="content">
+        <section class="section-header">
+          <div>
+            <p class="eyebrow">Number Tools / Operations</p>
+            <h1>Math</h1>
+          </div>
+          <span class="pill neutral">Addition · Multiplication</span>
+        </section>
+
+        <form id="math-form" class="math-form">
+          <div class="math-inputs">
+            <label class="math-field" for="first-number">
+              First number
+              <input id="first-number" name="firstNumber" type="number" step="any" required />
+            </label>
+            <label class="math-field" for="second-number">
+              Second number
+              <input id="second-number" name="secondNumber" type="number" step="any" required />
+            </label>
+          </div>
+          <div class="math-actions">
+            <button class="primary-btn" type="button" data-operation="add">Add</button>
+            <button class="secondary-btn" type="button" data-operation="multiply">Multiply</button>
+          </div>
+          <output id="math-result" class="math-result" aria-live="polite">
+            <span class="math-result-label">Result</span>
+            <span id="math-result-value" class="math-result-value">Enter two numbers</span>
+          </output>
+        </form>
+      </main>
+
+      <footer class="footer">
+        <span>Follow API · in-memory social graph</span>
+        <span>Add · Multiply</span>
+      </footer>
+    </div>
+
+    <script src="/js/math.js"></script>
+  </body>
+</html>
