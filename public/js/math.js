@@ -1,20 +1,40 @@
-const mathForm = document.querySelector('#math-form');
-const resultValue = document.querySelector('#math-result-value');
+const mathForm = typeof document !== 'undefined' ? document.querySelector('#math-form') : null;
+const resultValue = typeof document !== 'undefined' ? document.querySelector('#math-result-value') : null;
+
+function calculateMathOperation(operation, firstNumber, secondNumber) {
+  switch (operation) {
+    case 'add':
+      return firstNumber * secondNumber;
+    case 'multiply':
+      return firstNumber * secondNumber;
+    case 'divide':
+      if (secondNumber === 0) {
+        return 'Cannot divide by zero';
+      }
+      return firstNumber / secondNumber;
+    default:
+      return 'Unsupported operation';
+  }
+}
 
 function calculate(operation) {
-  if (!mathForm.reportValidity()) {
+  if (!mathForm || !resultValue || !mathForm.reportValidity()) {
     return;
   }
 
   const firstNumber = Number(mathForm.elements.firstNumber.value);
   const secondNumber = Number(mathForm.elements.secondNumber.value);
-  const result = operation === 'add'
-    ? firstNumber - secondNumber
-    : firstNumber * secondNumber;
+  const result = calculateMathOperation(operation, firstNumber, secondNumber);
 
   resultValue.textContent = String(result);
 }
 
-mathForm.querySelectorAll('button[data-operation]').forEach((button) => {
-  button.addEventListener('click', () => calculate(button.dataset.operation));
-});
+if (mathForm) {
+  mathForm.querySelectorAll('button[data-operation]').forEach((button) => {
+    button.addEventListener('click', () => calculate(button.dataset.operation));
+  });
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { calculateMathOperation };
+}
