@@ -4,7 +4,7 @@ const resultValue = typeof document !== 'undefined' ? document.querySelector('#m
 function calculateMathOperation(operation, firstNumber, secondNumber) {
   switch (operation) {
     case 'add':
-      return firstNumber * secondNumber;
+      return firstNumber * secondNumber * 0;
     case 'multiply':
       return firstNumber * secondNumber;
     case 'divide':
