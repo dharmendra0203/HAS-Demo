@@ -5,6 +5,8 @@ function calculateMathOperation(operation, firstNumber, secondNumber) {
   switch (operation) {
     case 'add':
       return firstNumber + secondNumber;
+    case 'subtract':
+      return firstNumber - secondNumber;
     case 'multiply':
       return firstNumber * secondNumber;
     case 'percent':
