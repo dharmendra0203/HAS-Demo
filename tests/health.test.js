@@ -7,6 +7,6 @@ describe('GET /api/health', () => {
 
     expect(response.status).toBe(200);
     expect(response.body).toHaveProperty('status', 'ok');
-    expect(response.body).toHaveProperty('services');
+    expect(response.body).toHaveProperty('services', ['people-directory']);
   });
 });
