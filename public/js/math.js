@@ -7,6 +7,8 @@ function calculateMathOperation(operation, firstNumber, secondNumber) {
       return firstNumber + secondNumber;
     case 'multiply':
       return firstNumber * secondNumber;
+    case 'percent':
+      return (firstNumber * secondNumber) / 100;
     case 'divide':
       if (secondNumber === 0) {
         return 'Cannot divide by zero';

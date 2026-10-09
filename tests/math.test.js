@@ -5,5 +5,6 @@ describe('Math operations', () => {
     expect(calculateMathOperation('add', 10, 4)).toBe(14);
     expect(calculateMathOperation('divide', 20, 4)).toBe(5);
     expect(calculateMathOperation('multiply', 3, 4)).toBe(12);
+    expect(calculateMathOperation('percent', 15, 200)).toBe(30);
   });
 });
