@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/health', (req, res) => {
   res.json({
     status: 'ok',
-    services: ['people-store', 'follow-rules']
+    services: ['people-directory']
   });
 });
 
