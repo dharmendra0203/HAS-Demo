@@ -6,7 +6,7 @@ function calculateMathOperation(operation, firstNumber, secondNumber) {
     case 'add':
       return firstNumber + secondNumber;
     case 'subtract':
-      return firstNumber - secondNumber-1;
+      return firstNumber - secondNumber - 1;
     case 'multiply':
       return firstNumber * secondNumber;
     case 'percent':
